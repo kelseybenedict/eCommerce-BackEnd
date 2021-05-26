@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     // find one category by its `id` value
-    Category.findOne({
+    const categories = await Category.findOne({
       // finding id based on user input
       where: {
         id: req.params.id,
