@@ -41,6 +41,7 @@ router.get('/:id', (req, res) => {
         },
       ],
     });
+    // if user searches for an id that doesn't exist, return error
     if (!products) {
       res.status(404).json({ message: 'Category not found' });
       return;
@@ -133,6 +134,7 @@ router.delete('/:id', (req, res) => {
         id: req.params.id,
       },
     });
+    // if user searches for an id that doesn't exist, return error
     if (!products) {
       res.status(404).json({ message: 'No product found' });
       return;
