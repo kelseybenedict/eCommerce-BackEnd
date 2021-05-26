@@ -43,7 +43,7 @@ router.get('/:id', async (req, res) => {
     });
     // if user searches for an id that doesn't exist, return error
     if (!products) {
-      res.status(404).json({ message: 'Category not found' });
+      res.status(404).json({ message: 'Product not found' });
       return;
     }
     res.status(200).json(products);
